@@ -1,0 +1,55 @@
+# ---- Node ----
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# ---- Environment ----
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ---- Logs ----
+logs
+*.log
+*.out
+*.pid
+*.gz
+*.swp
+
+# ---- Build / Dist ----
+dist/
+build/
+.cache/
+.next/
+out/
+coverage/
+
+# ---- React/Vite specific ----
+.vite/
+*.tsbuildinfo
+
+# ---- Database ----
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+dump.sql
+
+# ---- IDE/OS Files ----
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+
+# ---- Misc ----
+*.tgz
+*.zip
+*.tar
