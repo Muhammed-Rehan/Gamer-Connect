@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import './App.css'
+import '../App.css'
+import { Link } from "react-router-dom"
 
-function App() {
+function Login() {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
 
@@ -24,7 +25,8 @@ function App() {
       if (response.ok) {
         const data = await response.text()
         console.log('Login successful:', data)
-        alert('Login successful')
+        //register Successfull
+        window.location.href = '/'
       } else if (response.status === 401) {
         alert('Invalid username or password')
       } else {
@@ -51,8 +53,11 @@ function App() {
         onChange={(e) => setPassword(e.target.value)} 
       />
       <button className='submitLogin' onClick={handleLogin}>Login</button>
+
+      <Link to={"/register"}>don't have a account , signup</Link>
+
     </div>
   )
 }
 
-export default App
+export default Login
