@@ -5,6 +5,9 @@ import App from './pages/App.jsx'
 import Register from './pages/Register.jsx'
 import Login from './pages/Login.jsx'
 import { BrowserRouter,Routes, Route } from 'react-router-dom'
+import Dashboard from './pages/dashboard.jsx'
+import { useParams } from 'react-router-dom'
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
@@ -12,6 +15,7 @@ createRoot(document.getElementById('root')).render(
         <Route path='/' element={<App />}/>
         <Route path='/register' element={<Register />}/>
         <Route path='/login' element={<Login/>}/>
+        <Route path='/dashboard/:username' element={<Dashboard/>}/>
       </Routes>
     </BrowserRouter>
   </StrictMode>,
